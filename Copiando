@@ -1,0 +1,16 @@
+ white();
+        switch (ch) {
+        case "{":
+            return object();
+        case "[":
+            return array();
+        case "\"":
+            return string();
+        case "-":
+            return number();
+        default:
+            return (ch >= "0" && ch <= "9")
+                ? number()
+                : word();
+        }
+    };
